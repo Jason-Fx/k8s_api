@@ -1,0 +1,27 @@
+[ES]
+servers = host
+
+
+[logger]
+loggerPath =  /conf/logger.conf
+
+
+[formatters]
+keys=simpleFormatter
+
+
+[k8sconfig]
+cluster1 = /configfile/cluster1.conf
+cluster2 = /configfile/cluster2.conf
+cluster3 = /configfile/cluster3.conf
+
+[project]
+root=E:\kubernetes_api
+
+
+[Queue]
+servers = http://host:port
+
+
+[TaskQue]
+server = host
