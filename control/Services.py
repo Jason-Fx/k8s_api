@@ -28,15 +28,7 @@ class services:
             # namespace = 'default'
             namespace = k8sNamespace
             result = v1client.create_namespaced_service_with_http_info(namespace,
-                                                                       V1Service(api_version="v1", kind="Service",
-                                                                                 metadata=V1ObjectMeta(name=name,
-                                                                                                       labels=labels),
-                                                                                 spec=V1ServiceSpec(selector=labels,
-                                                                                                    ports=[
-                                                                                                        V1ServicePort(
-                                                                                                            protocol="TCP",
-                                                                                                            port=port,
-                                                                                                            target_port=port)])))
+                                                                       V1Service())
             data['k8scode'] = result[1]
             return data
         except (ApiException, Exception) as e:

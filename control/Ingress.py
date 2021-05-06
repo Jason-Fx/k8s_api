@@ -49,7 +49,7 @@ class ingress:
         data = {}
         httppath = []
         data1 = {"mName": "jobname",
-                 "mDomain": "ingresstest1.inm.com",
+                 "mDomain": "",
                  "mBackend": [{"svc_name": "pcloud-pclive-api", "svc_port": 8443, "path": "/dsf"},
                               {"svc_name": "pcloud-pclive-api", "svc_port": 8080, "path": "/"}]}
 
@@ -94,8 +94,8 @@ class ingress:
         httppath = []
         data1 = {"mName": "jobname",
                  "mDomain": "ingresstest1.inm.com",
-                 "mBackend": [{"svc_name": "pcloud-pclive-api", "svc_port": 8443, "path": "/dsf"},
-                              {"svc_name": "pcloud-pclive-api", "svc_port": 8080, "path": "/"}]}
+                 "mBackend": [{"svc_name": "", "svc_port": 8443, "path": "/dsf"},
+                              {"svc_name": "", "svc_port": 8080, "path": "/"}]}
 
         name = datajson['mName']
         domainname = datajson['mDomain']

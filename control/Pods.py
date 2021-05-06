@@ -150,7 +150,7 @@ class pods:
     @staticmethod
     def _add(name=None,image=None,cpu=None,memNum=None,port=None):
         labels={"name":name}
-        body=kubernetes.client.V1Pod(kind="Pod",api_version="v1",spec=kubernetes.client.V1PodSpec(dns_config=V1PodDNSConfig(nameservers=[""]),containers=[client.V1Container( lifecycle=V1Lifecycle(pre_stop=V1Handler(_exec=V1ExecAction(command=["/bin/sh","-c","/stopRegister.sh"]))),name= name,image=image,ports=[client.V1ContainerPort(container_port=port,protocol="TCP")])]),metadata=kubernetes.client.V1ObjectMeta(labels=labels,name=name))
+        body=kubernetes.client.V1Pod()
         print (body)
         pretty = True
         try:
